@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6424DD7A-333F-4B49-B01A-0BF809A2A477}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AO_HRIS</RootNamespace>
+    <AssemblyName>AO_HRIS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET, Version=1.9.3.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.9.3\lib\net462\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.105.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.105.1\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.4078.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4078.44\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.4078.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4078.44\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.4078.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4078.44\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\EmployeeScheduleAssignmentRepository.cs" />
+    <Compile Include="Data\OrganizationChartRepository.cs" />
+    <Compile Include="Data\RoleManagementRepository.cs" />
+    <Compile Include="Data\UserAccessRepository.cs" />
+    <Compile Include="Data\UserAccountRepository.cs" />
+    <Compile Include="Data\WorkScheduleRepository.cs" />
+    <Compile Include="Data\WorkScheduleRotationRepository.cs" />
+    <Compile Include="Data\WorkShiftRepository.cs" />
+    <Compile Include="Forms\Attendance\AttendanceRepository.cs" />
+    <Compile Include="Forms\Attendance\AttendanceManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Attendance\AttendanceManagementControl.Designer.cs">
+      <DependentUpon>AttendanceManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Attendance\ManualAttendanceEventDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Attendance\ManualAttendanceEventDialog.Designer.cs">
+      <DependentUpon>ManualAttendanceEventDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Compensation\CompensationManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Compensation\CompensationManagementControl.Designer.cs">
+      <DependentUpon>CompensationManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Compensation\CompensationRepository.cs" />
+    <Compile Include="Forms\Documents\EmployeeDocumentRepository.cs" />
+    <Compile Include="Forms\Documents\DocumentUploadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\DocumentUploadDialog.Designer.cs">
+      <DependentUpon>DocumentUploadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\EmployeeDocumentManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\EmployeeDocumentManagementControl.Designer.cs">
+      <DependentUpon>EmployeeDocumentManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeAssignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeAssignmentForm.Designer.cs">
+      <DependentUpon>EmployeeAssignmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeDirectoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeDirectoryControl.Designer.cs">
+      <DependentUpon>EmployeeDirectoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeDirectoryRepository.cs" />
+    <Compile Include="Forms\Employees\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeForm.Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeForm.Save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeRepository.Assignment.cs" />
+    <Compile Include="Forms\Employees\EmployeeRepository.cs" />
+    <Compile Include="Forms\Employees\EmployeeRepository.Edit.cs" />
+    <Compile Include="Forms\Employees\EmployeeRepository.Validation.cs" />
+    <Compile Include="Forms\Leave\LeaveBalanceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveBalanceDialog.Designer.cs">
+      <DependentUpon>LeaveBalanceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveManagementControl.Designer.cs">
+      <DependentUpon>LeaveManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveRequestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveRequestDialog.Designer.cs">
+      <DependentUpon>LeaveRequestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave\LeaveTypeDialog.Designer.cs">
+      <DependentUpon>LeaveTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Organization\ChartCanvas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Organization\CompanyLogoManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\CompanyLogoManagementForm.Designer.cs">
+      <DependentUpon>CompanyLogoManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Organization\DepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\DepartmentForm.Designer.cs">
+      <DependentUpon>DepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Organization\OrganizationChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\OrganizationChartControl.Designer.cs">
+      <DependentUpon>OrganizationChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Organization\OrganizationManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\OrganizationManagementControl.Designer.cs">
+      <DependentUpon>OrganizationManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Organization\OrganizationRepository.cs" />
+    <Compile Include="Forms\Organization\PositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Organization\PositionForm.Designer.cs">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Policies\CompanyPolicyManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Policies\CompanyPolicyManagementControl.Designer.cs">
+      <DependentUpon>CompanyPolicyManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Policies\CompanyPolicyRepository.cs" />
+    <Compile Include="Forms\Policies\PolicyDetailsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Policies\PolicyDetailsDialog.Designer.cs">
+      <DependentUpon>PolicyDetailsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Policies\PolicyRevisionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Policies\PolicyRevisionDialog.Designer.cs">
+      <DependentUpon>PolicyRevisionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Policies\PolicyRevisionDraft.cs" />
+    <Compile Include="Forms\Scheduling\EmployeeScheduleAssignmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\EmployeeScheduleAssignmentControl.Designer.cs">
+      <DependentUpon>EmployeeScheduleAssignmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scheduling\EmployeeScheduleAssignmentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\EmployeeScheduleAssignmentDialog.Designer.cs">
+      <DependentUpon>EmployeeScheduleAssignmentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scheduling\RotationConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\RotationConfigurationDialog.Designer.cs">
+      <DependentUpon>RotationConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scheduling\SchedulingManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\SchedulingManagementControl.Designer.cs">
+      <DependentUpon>SchedulingManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scheduling\WorkScheduleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\WorkScheduleDialog.Designer.cs">
+      <DependentUpon>WorkScheduleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scheduling\WorkScheduleManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\WorkScheduleManagementControl.Designer.cs">
+      <DependentUpon>WorkScheduleManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Scheduling\WorkShiftDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Scheduling\WorkShiftDialog.Designer.cs">
+      <DependentUpon>WorkShiftDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagement\RoleManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManagement\RoleManagementControl.Designer.cs">
+      <DependentUpon>RoleManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagement\UserAccountManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManagement\UserAccountManagementControl.Designer.cs">
+      <DependentUpon>UserAccountManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Employees\EmployeeListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Employees\EmployeeListControl.Designer.cs">
+      <DependentUpon>EmployeeListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\PermissionCodes.cs" />
+    <Compile Include="Security\PermissionService.cs" />
+    <Compile Include="UserControls\Dashboard\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Dashboard\DashboardControl.Designer.cs">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DatabaseConnection.cs" />
+    <Compile Include="Forms\Authentication\CompanySelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authentication\CompanySelectionForm.Designer.cs">
+      <DependentUpon>CompanySelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Authentication\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authentication\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\PasswordHelper.cs" />
+    <Compile Include="Security\UserSession.cs" />
+    <Compile Include="UserControls\Security\UserRoleManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Security\UserRoleManagementControl.Designer.cs">
+      <DependentUpon>UserRoleManagementControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Compensation\CompensationManagementControl.resx">
+      <DependentUpon>CompensationManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\DocumentUploadDialog.resx">
+      <DependentUpon>DocumentUploadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeAssignmentForm.resx">
+      <DependentUpon>EmployeeAssignmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeDirectoryControl.resx">
+      <DependentUpon>EmployeeDirectoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave\LeaveBalanceDialog.resx">
+      <DependentUpon>LeaveBalanceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave\LeaveManagementControl.resx">
+      <DependentUpon>LeaveManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave\LeaveRequestDialog.resx">
+      <DependentUpon>LeaveRequestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave\LeaveTypeDialog.resx">
+      <DependentUpon>LeaveTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Organization\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Organization\CompanyLogoManagementForm.resx">
+      <DependentUpon>CompanyLogoManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Organization\DepartmentForm.resx">
+      <DependentUpon>DepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Organization\OrganizationChartControl.resx">
+      <DependentUpon>OrganizationChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Organization\OrganizationManagementControl.resx">
+      <DependentUpon>OrganizationManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Organization\PositionForm.resx">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Scheduling\EmployeeScheduleAssignmentDialog.resx">
+      <DependentUpon>EmployeeScheduleAssignmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Scheduling\WorkScheduleDialog.resx">
+      <DependentUpon>WorkScheduleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement\RoleManagementControl.resx">
+      <DependentUpon>RoleManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement\UserAccountManagementControl.resx">
+      <DependentUpon>UserAccountManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Employees\EmployeeListControl.resx">
+      <DependentUpon>EmployeeListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Dashboard\DashboardControl.resx">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Authentication\CompanySelectionForm.resx">
+      <DependentUpon>CompanySelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Authentication\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControls\Security\UserRoleManagementControl.resx">
+      <DependentUpon>UserRoleManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\Documents\EmployeeDocumentManagement.sql" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\Policies\CompanyPolicyManagement_Setup.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>

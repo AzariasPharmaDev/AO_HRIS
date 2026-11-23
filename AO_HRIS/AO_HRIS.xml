@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+    <version>1.0.1.0</version>
+
+    <url>https://YOUR-DOMAIN.com/updates/AO_HRIS-Setup-1.0.1.exe</url>
+
+    <mandatory>false</mandatory>
+
+    <!-- <checksum algorithm="SHA256">
+        YOUR_SHA256_CHECKSUM
+    </checksum> -->
+</item>
